@@ -1,0 +1,59 @@
+.group {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+/* beide Elemente liegen ursprünglich übereinander */
+.not_transformed,
+.transformed {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height: 600px;
+  width: 600px;
+}
+
+/* zur visuellen Unterscheidung zwei unterschiedliche Stile zuweisen */
+.not_transformed {
+  background-color: black;
+}
+
+.transformed {
+  background-color: rgba(0, 0, 255, 0.323);
+  color: rgb(255, 255, 255);
+  font-size: 60px;
+}
+
+/* Transformationen */
+
+/* neue Klasse */
+.verschoben {
+    transition-property:all;
+    transition-duration: 1s;
+    transition-timing-function:ease-in-out;
+transition-delay: 0.5s;}
+
+.group:hover .verschoben {
+    transform: translate(60px, 200px);
+
+}
+
+.rotieren {
+    /*Kurze Schreibweise für die Transition-Eigenschaft */
+    transition: all 1s ease-in-out;
+}
+
+.group:hover .rotieren {
+    transform: rotate(45deg);
+    transform-origin: top left;
+}
+
+
+/*.transformed:hover {*/
+  /* veränderter Zustand */
+  /*background-color: black;
+  transform: translate(100px, 200px);
+}*/
+
+
+
